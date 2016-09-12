@@ -4,12 +4,11 @@
 
 include search.fth
 
-variable point
-variable mark
 variable last-command-event
 
 include keymap.fth
 include vt100.fth
+include point.fth
 include display.fth
 include bindings.fth
 

@@ -7,14 +7,14 @@ wordlist constant esc-map
 : control ( "name" -- c ) char 31 and ;
 
 ' quit control C ctl-x-map define-key
-:noname point @ mark @ point ! mark ! .cursor ; control X ctl-x-map define-key
+' exchange-point-and-mark control X ctl-x-map define-key
 
-:noname point @ -64 and point ! .cursor ; control A global-map define-key
-:noname point @ -64 and 63 + point ! .cursor ; control E global-map define-key
-:noname 1 point +! .cursor ; control F global-map define-key
-:noname -1 point +! .cursor ; control B global-map define-key
-:noname 64 point +! .cursor ; control N global-map define-key
-:noname -64 point +! .cursor ; control P global-map define-key
+' beginning-of-line control A global-map define-key
+' end-of-line       control E global-map define-key
+' forward-char      control F global-map define-key
+' backward-char     control B global-map define-key
+' next-line         control N global-map define-key
+' previous-line     control P global-map define-key
 :noname key ctl-x-map lookup-key ; control X global-map define-key
 
 : self-insert-command   ." INSERT:" last-command-event @ emit ;
