@@ -15,10 +15,11 @@ wordlist constant esc-map
 ' backward-char     control B global-map define-key
 ' next-line         control N global-map define-key
 ' previous-line     control P global-map define-key
-:noname key ctl-x-map lookup-key ; control X global-map define-key
+:noname s" C-x-" message  key ctl-x-map lookup-key ;
+  control X global-map define-key
 
-: self-insert-command   ." INSERT:" last-command-event @ emit ;
-: newline   ." NEWLINE" ;
+: self-insert-command   s" Insert" message ;
+: newline   s" Newline" message ;
 
 : define-ascii   127 32 do ['] self-insert-command i global-map define-key loop ;
 define-ascii
