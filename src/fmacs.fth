@@ -16,4 +16,8 @@ include bindings.fth
 : command-execute   last-command-event @ global-map lookup-key ;
 
 here 'text !
+here 64 char 1 fill
+here 64 + 64 char 2 fill
+here 128 + 64 char 3 fill
+
 : fmacs   redisplay  begin get-event command-execute redisplay again ;
