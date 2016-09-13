@@ -5,9 +5,11 @@
 include search.fth
 
 variable last-command-event
+variable 'text
 
 include vt100.fth
 include point.fth
+include text.fth
 include format.fth
 include display.fth
 include keymap.fth

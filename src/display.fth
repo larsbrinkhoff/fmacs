@@ -1,4 +1,3 @@
-variable 'text
 variable 'c
 create 'message 64 allot
 

@@ -18,11 +18,13 @@ wordlist constant esc-map
 :noname s" C-x-" message  key ctl-x-map lookup-key ;
   control X global-map define-key
 
-: self-insert-command   last-command-event @ s" Insert %c" message ;
+: self-insert-command   last-command-event @ insert-char ;
 : newline   s" Newline" message ;
 
 : define-ascii   127 32 do ['] self-insert-command i global-map define-key loop ;
 define-ascii
 
-' newline 10 global-map define-key
-' newline 13 global-map define-key
+' delete-char control D global-map define-key
+' newline control J global-map define-key
+' newline control M global-map define-key
+' delete-backward-char 127 global-map define-key
