@@ -7,20 +7,26 @@ include search.fth
 variable last-command-event
 variable 'text
 
+wordlist constant global-map
+wordlist constant ctl-x-map
+wordlist constant esc-map
+
 include vt100.fth
 include point.fth
-include text.fth
 include format.fth
+include window.fth
 include display.fth
+include text.fth
 include keymap.fth
+include minibuffer.fth
 include bindings.fth
 
 : get-event   key last-command-event ! ;
 : command-execute   last-command-event @ global-map lookup-key ;
 
-here 'text !
-here 64 char 1 fill
-here 64 + 64 char 2 fill
-here 128 + 64 char 3 fill
-
 : fmacs   redisplay  begin get-event 0message command-execute redisplay again ;
+
+here 'text !  1024 allot
+'text @ 64 char 1 fill
+'text @ 64 + 64 char 2 fill
+'text @ 128 + 64 char 3 fill
