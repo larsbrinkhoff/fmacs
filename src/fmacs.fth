@@ -8,6 +8,7 @@ variable last-command-event
 
 include vt100.fth
 include point.fth
+include format.fth
 include display.fth
 include keymap.fth
 include bindings.fth

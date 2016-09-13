@@ -9,11 +9,11 @@ create 'message 64 allot
 : 0message   'message 64 blank ;
 0message
 : .message   0 17 at-xy 'message 63 type ;
-: message   0message 'message swap cmove .message .cursor ;
+: message   format 0message 'message swap cmove .message .cursor ;
 
 : .c   'c @ @ emit  1 'c +! ;
 : .line   64 0 do .c loop .nl ;
-: .mode   .rev ." -UUU:----F1  *scratch*  All  (Fundamental) ----" .unrev ;
+: .mode   .rev ." -UUU:----F1  *scratch*  All  (Fundamental) --------" .unrev ;
 : .screen   'text @ 'c !  16 0 do .line loop .mode .message ;
 
 : redisplay   page .screen .cursor ;
