@@ -1,4 +1,6 @@
-Possibly a clone of Emacs, written in Forth.
+Possibly a clone of Emacs, written in Forth.  
+[![Build Status](https://travis-ci.org/larsbrinkhoff/fmacs.svg?branch=travis)]
+(https://travis-ci.org/larsbrinkhoff/fmacs)
 
 ### Limitations
 - Only runs in [lbForth](http://github.com/larsbrinkhoff/lbForth).
