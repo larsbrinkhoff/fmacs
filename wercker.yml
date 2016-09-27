@@ -1,0 +1,6 @@
+box: larsbrinkhoff/lbforth
+build:
+    steps:
+        - script:
+            name: build
+            code: forth < build.fth; chmod a+x fmacs

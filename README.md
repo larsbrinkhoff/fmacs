@@ -1,6 +1,8 @@
 Possibly a clone of Emacs, written in Forth.  
 [![Build Status](https://travis-ci.org/larsbrinkhoff/fmacs.svg?branch=travis)]
 (https://travis-ci.org/larsbrinkhoff/fmacs)
+[![Build Status](https://app.wercker.com/status/49e81e84322987ebfe902c5ab09c832e/s/master "wercker status")]
+(https://app.wercker.com/project/byKey/49e81e84322987ebfe902c5ab09c832e)
 
 ### Limitations
 - Only runs in [lbForth](http://github.com/larsbrinkhoff/lbForth).
