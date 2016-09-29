@@ -1,4 +1,5 @@
 #!/bin/sh
 
-(cd src; stty -echo raw; (echo include fmacs.fth fmacs; cat) | forth)
+cd src
+(echo include fmacs.fth fmacs; cat) | forth
 stty sane
