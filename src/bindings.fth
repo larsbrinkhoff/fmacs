@@ -4,8 +4,8 @@
 
 : no-find-file   s" Sorry, find-file is not implemented" message ;
 : find-file   ['] no-find-file s" Find file: " read-from-minibuffer ;
-: kill-emacs   restore-tty bye ;
-: suspend-emacs   restore-tty ." Stopped" cr also quit ;
+: kill-emacs   reset-terminal bye ;
+: suspend-emacs   reset-terminal ." Stopped" cr also quit ;
 
 ' kill-emacs control C ctl-x-map define-key
 ' exchange-point-and-mark control X ctl-x-map define-key

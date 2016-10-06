@@ -17,4 +17,6 @@ create 'message 64 allot
 : .screen   0 window-line @ at-xy  'text @ 'c !
    window-height @ 0 do .line loop .mode .message ;
 
+: reset-terminal   restore-tty  0 17 at-xy ;
+
 : redisplay   page .screen .cursor ;
