@@ -1,7 +1,7 @@
 language: c
 sudo: required
 install: sh -e install-deps.sh
-script: make
+script: make check
 notifications:
   email: lars@nocrew.org
   irc:

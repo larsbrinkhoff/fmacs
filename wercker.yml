@@ -4,3 +4,6 @@ build:
         - script:
             name: build
             code: forth < build.fth; chmod a+x fmacs
+        - script:
+            name: test
+            code: printf '\030\003' | ./fmacs
