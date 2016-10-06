@@ -13,7 +13,7 @@ create 'message 64 allot
 
 : .c   'c @ @ emit  1 'c +! ;
 : .line   64 0 do .c loop .nl ;
-: .mode   .rev ." -UUU:----F1  *scratch*  All  (Fundamental) --------" .unrev ;
+: .mode   .rev ." -UUU:----F1  *scratch*  All  (Fundamental) ---------------------" .unrev ;
 : .screen   0 window-line @ at-xy  'text @ 'c !
    window-height @ 0 do .line loop .mode .message ;
 
