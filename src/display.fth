@@ -18,5 +18,6 @@ create 'message 64 allot
    window-height @ 0 do .line loop .mode .message ;
 
 : reset-terminal   restore-tty  0 17 at-xy ;
+: keyboard-quit   s" Quit" message ;
 
 : redisplay   page .screen .cursor ;

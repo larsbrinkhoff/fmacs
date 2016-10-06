@@ -24,6 +24,7 @@ Possibly a clone of Emacs, written in Forth.
 - `C-h` - Stub; provide a helpful message.
 - `C-x u`, `C-_` - Stub; does not undo.
 - `C-q` - Quoted insert.
+- `C-g` - Quit.
 - `C-x C-x` - Exchange point and mark.
 - `C-z` - Return to Forth.  Type `fmacs` to get back to Fmacs.
 - `C-x C-c` - Exit Forth.
