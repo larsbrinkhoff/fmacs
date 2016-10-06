@@ -12,6 +12,7 @@
 
 ' kill-emacs control C ctl-x-map define-key
 ' exchange-point-and-mark control X ctl-x-map define-key
+' set-mark-command control @ global-map define-key
 ' find-file control F ctl-x-map define-key
 ' execute-extended-command char x esc-map define-key
 

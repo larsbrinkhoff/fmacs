@@ -7,6 +7,7 @@ variable mark
 : point-min   0 ;
 : point-max   1023 ;
 
+: set-mark-command   point @ set-mark ;
 : exchange-point-and-mark   point @ mark @ goto-char set-mark ;
 
 : forward-char    1 point +! ;
