@@ -38,12 +38,12 @@ variable d
 ' quoted-insert     control Q global-map define-key
 ' keyboard-quit     control G global-map define-key
 
-:noname s" C-x-" message  key ctl-x-map lookup-key ;
+:noname s" C-x-" message  key s" " message ctl-x-map lookup-key ;
   control X global-map define-key
-:noname s" ESC-" message  key esc-map lookup-key ;
+:noname s" ESC-" message  key s" " message esc-map lookup-key ;
   control [ global-map define-key
 
-: esc-[   s" " message key esc-[-map lookup-key ;
+: esc-[   key esc-[-map lookup-key ;
 ' esc-[ char [ esc-map define-key
 ' esc-[ char O esc-map define-key
 ' beginning-of-buffer char < esc-map define-key
