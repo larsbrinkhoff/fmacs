@@ -46,6 +46,8 @@ variable d
 : esc-[   s" " message key esc-[-map lookup-key ;
 ' esc-[ char [ esc-map define-key
 ' esc-[ char O esc-map define-key
+' beginning-of-buffer char < esc-map define-key
+' end-of-buffer char > esc-map define-key
 
 : define-ascii   127 32 do ['] self-insert-command i global-map define-key loop ;
 define-ascii
