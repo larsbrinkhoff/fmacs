@@ -32,6 +32,7 @@ variable d
 ' help-prefix       control H global-map define-key
 ' undo              control _ global-map define-key
 ' undo              char u    ctl-x-map define-key
+' quoted-insert     control Q global-map define-key
 
 :noname s" C-x-" message  key ctl-x-map lookup-key ;
   control X global-map define-key
