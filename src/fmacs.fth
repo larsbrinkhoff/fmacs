@@ -19,6 +19,7 @@ include format.fth
 include window.fth
 include display.fth
 include text.fth
+include kill.fth
 include keymap.fth
 include minibuffer.fth
 include bindings.fth

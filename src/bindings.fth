@@ -51,6 +51,8 @@ variable d
 ' esc-[ char O esc-map define-key
 ' beginning-of-buffer char < esc-map define-key
 ' end-of-buffer char > esc-map define-key
+' kill-ring-save char w esc-map define-key
+' yank control Y global-map define-key
 
 : define-ascii   127 32 do ['] self-insert-command i global-map define-key loop ;
 define-ascii

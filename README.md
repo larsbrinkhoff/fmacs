@@ -22,6 +22,8 @@ Possibly a clone of Emacs, written in Forth.
 - `C-a`, `C-e` - Go to beginning/end of line.
 - `M-<`, `M->` - Go to beginning/end of buffer.
 - `C-d`, `DEL` - Delete character to the right/left.
+- `M-w` - Copy region to kill ring.
+- `C-y` - Insert text from kill ring.
 - `C-j`, `C-m` - Stub; does not break line.
 - `C-x C-f` - Stub; does not load file.
 - `C-h` - Stub; provide a helpful message.
