@@ -7,10 +7,13 @@
 : kill-emacs   reset-terminal bye ;
 : suspend-emacs   reset-terminal ." Stopped" cr also quit ;
 : help-prefix   s" Don't panic!" message ;
+: extended-command  'minibuffer 4 + 50 evaluate ;
+: execute-extended-command   ['] extended-command s" M-x " read-from-minibuffer ;
 
 ' kill-emacs control C ctl-x-map define-key
 ' exchange-point-and-mark control X ctl-x-map define-key
 ' find-file control F ctl-x-map define-key
+' execute-extended-command char x esc-map define-key
 
 variable d
 : "%d" ( u1 -- a u2 ) 12 swap -3 * + s" %d %d %d %d" rot /string ;

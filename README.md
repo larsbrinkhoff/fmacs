@@ -16,6 +16,7 @@ Possibly a clone of Emacs, written in Forth.
 
 ### Key bindings
 - `M-:` - Evaluate a Forth expression.
+- `M-x` - Execute extended command.
 - `C-f`, `C-b`, `C-p`, `C-n` - Cursor movement.
 - `C-a`, `C-e` - Go to beginning/end of line.
 - `C-d`, `DEL` - Delete character to the right/left.
