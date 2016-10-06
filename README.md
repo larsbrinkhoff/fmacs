@@ -18,6 +18,7 @@ Possibly a clone of Emacs, written in Forth.
 - `M-:` - Evaluate a Forth expression.
 - `M-x` - Execute extended command.
 - `C-f`, `C-b`, `C-p`, `C-n` - Cursor movement.
+- `M-f`, `M-b` - Move forward/backward by word.
 - `C-a`, `C-e` - Go to beginning/end of line.
 - `M-<`, `M->` - Go to beginning/end of buffer.
 - `C-d`, `DEL` - Delete character to the right/left.
