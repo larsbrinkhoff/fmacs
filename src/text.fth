@@ -7,3 +7,5 @@
 
 : self-insert-command   last-command-event @ insert-char ;
 : newline   s" Newline" message ;
+
+: undo   s" You know that last thing you did?  Just do it in reverse." message ;

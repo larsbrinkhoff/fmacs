@@ -26,6 +26,8 @@ variable d
 ' previous-line     control P global-map define-key
 ' suspend-emacs     control Z global-map define-key
 ' help-prefix       control H global-map define-key
+' undo              control _ global-map define-key
+' undo              char u    ctl-x-map define-key
 
 :noname s" C-x-" message  key ctl-x-map lookup-key ;
   control X global-map define-key
