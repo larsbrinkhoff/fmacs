@@ -6,6 +6,6 @@ notifications:
   email: lars@nocrew.org
   irc:
     channels: irc.nocrew.org#nocrew
-    template: %{repository} ${branch} ${message}
+    template: ${repository} ${branch} ${message}
     use_notice: true
     skip_join: true
