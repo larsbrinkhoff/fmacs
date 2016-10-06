@@ -1,0 +1,10 @@
+language: none
+build:
+  pre_ci_boot:
+    image_name: larsbrinkhoff/lbforth
+    image_tag: latest
+    pull: true
+  ci:
+    - forth < build.fth
+    - chmod a+x fmacs
+    - printf '\030\003' | ./fmacs
