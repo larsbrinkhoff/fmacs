@@ -6,6 +6,7 @@
 : find-file   ['] no-find-file s" Find file: " read-from-minibuffer ;
 : kill-emacs   reset-terminal bye ;
 : suspend-emacs   reset-terminal ." Stopped" cr also quit ;
+: help-prefix   s" Don't panic!" message ;
 
 ' kill-emacs control C ctl-x-map define-key
 ' exchange-point-and-mark control X ctl-x-map define-key
@@ -24,6 +25,7 @@ variable d
 ' next-line         control N global-map define-key
 ' previous-line     control P global-map define-key
 ' suspend-emacs     control Z global-map define-key
+' help-prefix       control H global-map define-key
 
 :noname s" C-x-" message  key ctl-x-map lookup-key ;
   control X global-map define-key
