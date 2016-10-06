@@ -1,10 +1,10 @@
-FORTH = forth > /dev/null
+FORTH = forth
 SRC = $(wildcard src/*.fth)
 
 all: fmacs
 
 fmacs: $(SRC)
-	$(FORTH) < build.fth
+	$(FORTH) < build.fth | grep Build-OK
 	chmod a+x $@
 
 clean:
