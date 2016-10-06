@@ -21,9 +21,13 @@ variable d
 ' beginning-of-line control A global-map define-key
 ' end-of-line       control E global-map define-key
 ' forward-char      control F global-map define-key
+' forward-char      char C    esc-[-map define-key
 ' backward-char     control B global-map define-key
+' backward-char     char D    esc-[-map define-key
 ' next-line         control N global-map define-key
+' next-line         char B    esc-[-map define-key
 ' previous-line     control P global-map define-key
+' previous-line     char A    esc-[-map define-key
 ' suspend-emacs     control Z global-map define-key
 ' help-prefix       control H global-map define-key
 ' undo              control _ global-map define-key
@@ -33,6 +37,10 @@ variable d
   control X global-map define-key
 :noname s" ESC-" message  key esc-map lookup-key ;
   control [ global-map define-key
+
+: esc-[   s" " message key esc-[-map lookup-key ;
+' esc-[ char [ esc-map define-key
+' esc-[ char O esc-map define-key
 
 : define-ascii   127 32 do ['] self-insert-command i global-map define-key loop ;
 define-ascii

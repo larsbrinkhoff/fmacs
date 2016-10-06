@@ -10,6 +10,7 @@ variable 'text
 wordlist constant global-map
 wordlist constant ctl-x-map
 wordlist constant esc-map
+wordlist constant esc-[-map
 
 include tty.fth
 include vt100.fth
