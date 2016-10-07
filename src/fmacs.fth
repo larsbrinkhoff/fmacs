@@ -4,6 +4,8 @@
 
 include search.fth
 
+variable this-command
+variable last-command
 variable last-command-event
 variable 'text
 
@@ -25,7 +27,8 @@ include minibuffer.fth
 include bindings.fth
 
 : get-event   key last-command-event ! ;
-: command-execute   last-command-event @ global-map lookup-key ;
+: !last-command   this-command @ last-command ! ;
+: command-execute   last-command-event @ global-map lookup-key  !last-command ;
 : command-loop   begin get-event 0message command-execute redisplay again ;
 
 : fmacs   init-tty redisplay command-loop restore-tty ;
