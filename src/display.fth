@@ -11,7 +11,7 @@ create 'message 64 allot
 : .message   message? if 0 17 at-xy 'message 63 type then ;
 : message   format 0message 'message swap cmove .message .cursor ;
 
-: .c   'c @ @ emit  1 'c +! ;
+: .c   'c @ c@ emit  1 'c +! ;
 : .line   64 0 do .c loop .nl ;
 : .mode   .rev ." -UUU:----F1  *scratch*  All  (Fundamental) ---------------------" .unrev ;
 : .screen   0 window-line @ at-xy  'text @ 'c !
