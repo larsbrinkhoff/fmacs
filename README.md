@@ -20,6 +20,7 @@ Possibly a clone of Emacs, written in Forth.
 - `M-<`, `M->` - Go to beginning/end of buffer.
 - `C-d`, `DEL` - Delete character to the right/left.
 - `M-w` - Copy region to kill ring.
+- `M-d`, `M-DEL` - Delete word and copy to kill ring.
 - `C-y` - Insert text from kill ring.
 - `C-j`, `C-m` - Stub; does not break line.
 - `C-x C-f` - Stub; does not load file.

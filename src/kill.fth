@@ -14,3 +14,11 @@ variable 'kill-region
 ' kill-region 'kill-region !
 : kill-ring-save   region kill ;
 : yank   'kill #kill @ bounds ?do i c@ insert-char loop ;
+
+\ TODO: add to kill ring.
+: kill-word   begin word? 0= while delete-char repeat
+              begin word? while delete-char repeat ;
+: backward-kill-word   backward-char
+   begin word? 0= while delete-backward-char repeat
+   begin word? while delete-backward-char repeat
+   forward-char ;

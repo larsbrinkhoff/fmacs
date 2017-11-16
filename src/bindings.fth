@@ -28,6 +28,7 @@ variable d
 ' forward-char      char C    esc-[-map define-key
 ' backward-char     control B global-map define-key
 ' backward-char     char D    esc-[-map define-key
+' kill-word         char D    esc-map define-key
 ' next-line         control N global-map define-key
 ' next-line         char B    esc-[-map define-key
 ' previous-line     control P global-map define-key
@@ -61,3 +62,4 @@ define-ascii
 ' newline control J global-map define-key
 ' newline control M global-map define-key
 ' delete-backward-char 127 global-map define-key
+' backward-kill-word 127 esc-map define-key
