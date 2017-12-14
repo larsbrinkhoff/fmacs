@@ -1,5 +1,6 @@
 \ Build an fmacs executable.
 
+: h-[defined] postpone [defined] ;
 include lib/save-image.fth
 s" src/" searched
 include fmacs.fth
